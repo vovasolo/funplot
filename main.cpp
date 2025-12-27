@@ -331,7 +331,7 @@ int main(int, char**)
             ImGui::Begin("ImPlot window");
             if (ImPlot::BeginPlot("Line Plots", ImVec2(-1, -1))) {
                 ImPlot::SetupAxes("x","y");
-                //ImPlot::SetupAxesLimits(-10, 10, -5, 5);
+                ImPlot::SetupAxesLimits(-5, 5, -5, 5, ImPlotCond_Once);
                 if (new_limits) {
                     ImPlot::SetupAxesLimits(xmin, xmax, ymin, ymax, ImPlotCond_Always);
                     
